@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+  <main class="main">
+    <header class="header home">
+      <div class="container">
+        <div class="logo-wrapper">
+          <img src="./assets/pokeball.svg" alt="pokeball" />
+          <h1>Pokemon</h1>
+        </div>
+
+        <div class="search-wrapper">
+          <div class="search-wrap">
+            <img src="./assets/search.svg" alt="search icon" class="search-icon" />
+            <input type="text" class="search-input body3-fonts" placeholder="Search" id="search-input" />
+            <img src="./assets/cross.svg" alt="cross icon" class="search-close-icon" id="search-close-icon" />
+          </div>
+
+          <div class="sort-wrapper">
+            <div class="sort-wrap">
+              <img src="./assets/sorting.svg" alt="sorting" class="sort-icon" id="sort-icon" />
+            </div>
+
+            <div class="filter-wrapper">
+
+              <p class="body2-fonts">Sort by:</p>
+              <div class="filter-wrap">
+                <div>
+                  <input type="radio" id="number" name="filters" value="number" checked />
+                  <label for="number" class="body3-fonts">Number</label>
+                </div>
+                <div>
+                  <input type="radio" id="name" name="filters" value="name" />
+                  <label for="name" class="body3-fonts">Name</label>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div style="border: none; display: flex; justify-content: center; margin: 10px; ;" class="filter-button ">
+            <select style=" color: red; border: none; padding: 6px; border-radius: 16px; " name="type" id="type">
+              <option value="grass" id="select">grass</option>
+              <option value="normal" id="select">normal</option>
+              <option value="poison" id="select">poison</option>
+              <option value="ground" id="select">ground</option>
+              <option value="rock" id="select">rock</option>
+              <option value="bug" id="select">ghost</option>
+              <option value="fire" id="select">fire</option>
+              <option value="water" id="select">water</option>
+              <option value="electric" id="select">electric</option>
+              <option value="psychic" id="select">psychic</option>
+              <option value="ice" id="select">ice</option>
+              <option value="dragon" id="select">dragon</option>
+              <option value="fairy" id="select">fairy</option>
+            </select>
+
+          </div>
+          <button id="filter"> Filter by type</button>
+          <a href="index.html"><button id="filter">Reset the page</button></a>
+        </div>
+
+      </div>
+    </header>
+    <!-- ............................................................................................................................ -->
+    <section class="pokemon-list">
+      <div class="container">
+        <div class="list-wrapper"></div>
+      </div>
+      <div id="not-found-message">Pokemon not found</div>
+    </section>
+  </main>
+
+  <script src="./pokemon.js" defer></script>
+  <script src="./search.js" defer></script>
+</body>
+
+</html>
